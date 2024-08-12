@@ -2,44 +2,46 @@
 <mat-card class="registerBody">
   <div>
     <div>
-        <img
-          src="../../assets/logoGoogle.png"
-          alt=""
-          srcset=""
-          height="65"
-          width="65"
-          style="margin-bottom: 10px;"
-        />
-      </div>
+      <img
+        src="../../assets/logoGoogle.png"
+        alt=""
+        srcset=""
+        height="65"
+        width="65"
+        style="margin-bottom: 10px"
+      />
+    </div>
     <div style="display: flex; justify-content: space-between">
       <div>
         <div>
-          <h1 style="font-family: sans-serif; font-size: 2.5rem; font-weight: '400'; padding-left: 10px;">
-            <p> Create a Google </p> 
+          <h1
+          class="createAGoogle"
+          >
+            <p>Create a Google</p>
             Account
           </h1>
-          <h2 style="font-weight: 400; font-size: 1rem; margin-left: 10px;">Enter your name</h2>
+          <h2 style="font-weight: 400; font-size: 1rem; margin-left: 10px">
+            Enter your name
+          </h2>
         </div>
       </div>
       <div>
         <form action="submit">
           <p>
-            <mat-form-field appearance="outline">
+            <mat-form-field  class="inputUser" appearance="outline">
               <mat-label>FirstName</mat-label>
-              <input matInput placeholder="" />
+              <input matInput placeholder="" class="inputArea" />
             </mat-form-field>
           </p>
           <p>
-            <mat-form-field appearance="outline">
+            <mat-form-field  class="inputUser" appearance="outline">
               <mat-label>LastName (optional)</mat-label>
               <input matInput placeholder="" />
             </mat-form-field>
           </p>
-          <div class="" style="display: flex; justify-content: end; text-align: center; font-weight: 400;">
-            <a  style="width: 80px; height: 40px; border-radius: 30px; background-color: #0b57d0; box-shadow: none; color: white; align-content: center;">
-              <!-- <mat-icon>favorit</mat-icon> -->
-                <span >Next</span>
-             
+          <div class="nxtDiv">
+            <a class="nxt">
+              <span>Next</span>
             </a>
           </div>
         </form>
@@ -47,11 +49,34 @@
     </div>
   </div>
 </mat-card>
-<div style="display: flex; justify-content: space-between; margin: 30px 220px 100px 220px">
-  <div>Hindi(India) </div>
-  <div>
-    <span>Help</span>
-    <span style="margin: 40px;">Privacy</span>
-    <span>Terms</span>
+<div
+  style="
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 220px 100px 220px;
+  "
+>
+
+<div>
+
+  <mat-form-field class="btm" appearance="fill">
+    <mat-select [value]="'en-US'">
+      <mat-option class="opt" value="en-US">English (United States)</mat-option>
+      <mat-option class="opt" value="fr">French</mat-option>
+      <mat-option class="opt" value="de">German</mat-option>
+      <mat-option class="opt" value="it">Italian</mat-option>
+      <mat-option class="opt" value="es">Spanish</mat-option>
+      <mat-option class="opt" value="pt">Portuguese</mat-option>
+      <mat-option class="opt" value="ja">Japanese</mat-option>
+      <mat-option class="opt" value="ko">Korean</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+  <div class="lang">
+    <span><a href="" class="footerTxt">Help</a></span>
+    <span style="margin: 25px"> <a href="" class="footerTxt">Privacy</a></span>
+    <span><a href="" class="footerTxt">Terms</a></span>
   </div>
 </div>
+
+<!-- <a [routerLink]="['/login']"> Login </a> -->
