@@ -58,11 +58,17 @@
             </div>
           </div>
           <div class="button-class">
-            <a [routerLink] = "['/register']">
-            <button mat-button color="primary" class="button">
-              Create account
-            </button>
-          </a>
+            <!-- <a > -->
+              <button
+                mat-button
+                color="primary"
+                class="button"
+                id="divOption"
+                (click)="displayOption($event)"
+              >
+                Create account
+              </button>
+            <!-- </a> -->
             <button mat-raised-button color="primary" class="button button-2">
               Next
             </button>
@@ -82,4 +88,13 @@
       <button class="footer-button">Terms</button>
     </div>
   </div>
+
+  <!---------------- PopUp  ------------------------->
+<mat-card id="popUp">
+  <div>
+    <p [routerLink]="['/register']">For my personal use</p>
+    <p [routerLink]="['/register']">For my child</p>
+    <p [routerLink]="['/register']">For work or my bussiness</p>
+  </div>
+</mat-card>
 </body>

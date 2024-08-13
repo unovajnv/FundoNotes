@@ -98,8 +98,8 @@ span {
 .main-2 {
   display: flex;
   justify-content: space-between;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 220px;
+  margin-right: 220px;
   margin-top: 10px;
   font-size: 12px;
   color: #1f1f1f;
@@ -119,4 +119,18 @@ span {
 
 ::ng-deep .mat-form-field-wrapper {
   padding-bottom: 4px;
+}
+#popUp{
+  background-color: #e0e7f1 !important;
+  height: 95px;
+  width: 160px;
+  font-size: small;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 785px;
+  margin-top: -245px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
 }
