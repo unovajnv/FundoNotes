@@ -17,8 +17,8 @@
           <h1
           class="createAGoogle"
           >
-            <p>Create a Google</p>
-            Account
+            <p>Create a Google Account</p>
+            
           </h1>
           <h2 style="font-weight: 400; font-size: 1rem; margin-left: 10px">
             Enter your name
@@ -53,14 +53,15 @@
   style="
     display: flex;
     justify-content: space-between;
-    margin: 30px 220px 100px 220px;
+    margin: 30px 180px 100px 180px;
   "
 >
 
 <div>
-
-  <mat-form-field class="btm" appearance="fill">
-    <mat-select [value]="'en-US'">
+<!-- 
+  <mat-form-field class="btm" appearance="fill"> -->
+    <div class="btn" >
+    <mat-select [value]="'en-US'" placeholder="English (United States)" disabledRipple>
       <mat-option class="opt" value="en-US">English (United States)</mat-option>
       <mat-option class="opt" value="fr">French</mat-option>
       <mat-option class="opt" value="de">German</mat-option>
@@ -70,7 +71,8 @@
       <mat-option class="opt" value="ja">Japanese</mat-option>
       <mat-option class="opt" value="ko">Korean</mat-option>
     </mat-select>
-  </mat-form-field>
+  </div>
+  <!-- </mat-form-field> -->
 </div>
   <div class="lang">
     <span><a href="" class="footerTxt">Help</a></span>
