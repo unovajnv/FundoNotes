@@ -12,11 +12,21 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatSelectModule} from '@angular/material/select';
+import { BasicInfoComponent } from './basic-info/basic-info.component';
+import { PasswordComponent } from './password/password.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    BasicInfoComponent,
+    PasswordComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -29,6 +39,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatIconModule,
     MatDividerModule,
     MatSelectModule,
+    MatCheckboxModule,
+    HttpClientModule,
+    FormsModule
     
   ],
   providers: [],

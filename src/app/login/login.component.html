@@ -37,8 +37,8 @@
           <div>
             <div>
               <mat-form-field appearance="outline" color="primary">
-                <mat-label>Email or phone</mat-label>
-                <input matInput />
+                <mat-label>Email or phone*</mat-label>
+                <input matInput/>
               </mat-form-field>
             </div>
             <div>
@@ -79,9 +79,18 @@
   </div>
 
   <div class="main-2">
-    <div>
-      <button class="footer-button">English (United Kingdom)</button>
-    </div>
+      <div class="btn" >
+        <mat-select [value]="'en-US'" placeholder="English (United States)" disabledRipple>
+          <mat-option class="opt" value="en-US">English (United States)</mat-option>
+          <mat-option class="opt" value="fr">French</mat-option>
+          <mat-option class="opt" value="de">German</mat-option>
+          <mat-option class="opt" value="it">Italian</mat-option>
+          <mat-option class="opt" value="es">Spanish</mat-option>
+          <mat-option class="opt" value="pt">Portuguese</mat-option>
+          <mat-option class="opt" value="ja">Japanese</mat-option>
+          <mat-option class="opt" value="ko">Korean</mat-option>
+        </mat-select>
+      </div>
     <div>
       <button class="footer-button">Help</button>
       <button class="footer-button">Privacy</button>
@@ -92,9 +101,9 @@
   <!---------------- PopUp  ------------------------->
 <mat-card id="popUp">
   <div>
-    <p [routerLink]="['/register']">For my personal use</p>
-    <p [routerLink]="['/register']">For my child</p>
-    <p [routerLink]="['/register']">For work or my bussiness</p>
+    <p class="pp" [routerLink]="['/register']">For my personal use</p>
+    <p class="pp" [routerLink]="['/register']">For my child</p>
+    <p class="pp" [routerLink]="['/register']">For work or my bussiness</p>
   </div>
 </mat-card>
 </body>

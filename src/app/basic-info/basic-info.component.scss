@@ -1,0 +1,113 @@
+form {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 60px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    height: 350px;
+    width: 913px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px 10px;
+    margin-bottom: 0px;
+    font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif !important;
+    font-weight: 400;
+
+    // background-color: rgb(255, 255, 255);
+    // margin: 80px 175px 0px 175px;
+    // padding: 30px 30px;
+    // border-radius: 20px;
+    // box-shadow: none;
+  }
+  .button {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50px;
+  }
+  .button-2 {
+    background-color: #0b57d0 !important;
+  }
+  .button-class{
+    display: flex;
+    justify-content: end;
+    margin-right: 15px;
+  }
+  .main {
+    display: flex;
+    margin-top: 24px;
+  }
+  span {
+    font-weight: 400;
+  }
+  .flex-container-1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    // gap: 15px;
+    margin-left: 9px;
+  }
+  
+  .flex-container-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 9px;
+  }
+  
+  .main-2 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 220px;
+    margin-right: 220px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #1f1f1f;
+  }
+  .footer-button {
+    font-size: 12px !important;
+    color: #1f1f1f !important;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: rgb(231, 229, 229);
+  }
+  
+  .footer-button:not(:hover) {
+    background-color: transparent;
+  }
+  
+  ::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 4px;
+  }
+  .gender{
+    // background-color: #0b57d0;
+    width: 300px;
+    margin: 10px 15px;
+    border: 1px solid ;
+    height: 45px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+    cursor: pointer;
+  }
+  .inputBox{
+    width: 300px;
+    height: 50px;
+    background-color: red;
+    display: block;
+  }
+  .txt{
+      text-decoration: none;
+      margin-left: 20px;
+      color: #0b57d0;
+  } 
+  .btn{
+    height: 20px;
+    width: 170px !important;
+    align-items: center;
+    background-color: F0F4F9;
+    padding: 6px;
+    border-radius: 10px !important;
+  } 

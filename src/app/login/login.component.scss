@@ -1,9 +1,9 @@
 form {
   margin-left: 200px;
   margin-right: 200px;
-  margin-top: 70px;
+  margin-top: 60px;
   background-color: #ffffff;
-  border-radius: 28px;
+  border-radius: 20px;
   height: 330px;
   width: 800px;
   display: flex;
@@ -30,11 +30,12 @@ mat-form-field {
   font-weight: 400;
 }
 .note {
-  margin-left: 8px;
+  margin-left: 14px;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
   color: #444746;
   font-size: 0.875rem;
+
 }
 .mat-mdc-form-field-subscript-wrapper,
 .mat-mdc-form-field-bottom-align,
@@ -49,7 +50,7 @@ mat-button {
 .blue-button {
   height: auto;
   text-align: left !important;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .button-class {
   display: flex;
@@ -70,10 +71,11 @@ mat-button {
   margin-top: 24px;
 }
 h1 {
-  margin: 0;
+  margin-bottom:20px ;
   padding: 0px;
   font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
   font-weight: 400;
+  font-size: 50px;
 
   font-weight: 400;
 }
@@ -126,11 +128,23 @@ span {
   width: 160px;
   font-size: small;
   justify-content: center;
-  padding: 10px;
+  // padding: 10px;
   border-radius: 10px;
-  margin-left: 785px;
-  margin-top: -245px;
+  margin-left: 780px;
+  margin-top: -250px;
   cursor: pointer;
   display: none;
   z-index: 1000;
+}
+.btn{
+  height: 20px;
+  width: 170px !important;
+  align-items: center;
+  background-color: F0F4F9;
+  padding: 6px;
+  border-radius: 10px !important;
+} 
+.pp:hover{
+    background-color: rgb(184, 110, 110);
+    width: 100%;
 }
