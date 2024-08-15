@@ -17,7 +17,7 @@ import { PasswordComponent } from './password/password.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,8 @@ import { FormsModule } from '@angular/forms';
     MatSelectModule,
     MatCheckboxModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
     
   ],
   providers: [],
