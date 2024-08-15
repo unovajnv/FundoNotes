@@ -30,13 +30,21 @@
           <p class="fName">
             <mat-form-field  class="inputUser" appearance="outline">
               <mat-label>FirstName</mat-label>
-              <input matInput placeholder="" class="inputArea" />
+
+              <input matInput class="inputArea"   placeholder="FirstName" [formControl]="firstNameFormControl" [errorStateMatcher]="matcher"/>
+                <mat-error *ngIf="firstNameFormControl.hasError('required')">
+                FirstName <strong>required</strong>
+                </mat-error>
+
             </mat-form-field>
           </p>
           <p>
             <mat-form-field  class="inputUser" appearance="outline">
               <mat-label>LastName (optional)</mat-label>
-              <input matInput placeholder="" />
+              <input matInput placeholder="FirstName" [formControl]="lastNameFormControl" [errorStateMatcher]="matcher" />
+              <mat-error *ngIf="lastNameFormControl.hasError('required')">
+                LastName <strong>required</strong>
+                </mat-error>
             </mat-form-field>
           </p>
           <div class="nxtDiv">
