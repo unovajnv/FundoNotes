@@ -10,8 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent{
   constructor() { }
   ngOnInit(): void {}
-  // isSidebarOpen = false;
-  // toggleSidebar() {
-  //   this.isSidebarOpen = !this.isSidebarOpen;
-  // }
+  isSidebarOpen = false;
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
 }
