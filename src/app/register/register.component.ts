@@ -9,17 +9,13 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   }
 }
 
-
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
   constructor() { }
-
   ngOnInit(): void {
   }
 
@@ -29,12 +25,4 @@ export class RegisterComponent implements OnInit {
     Validators.email,
   ]);
   matcher = new MyErrorStateMatcher();
-
-
-  lastNameFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email,
-  ]);
-  matcher2 = new MyErrorStateMatcher();
-
 }
