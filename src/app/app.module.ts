@@ -22,6 +22,12 @@ import { HomeComponent } from './home/home.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { NotesComponent } from './notes/notes.component';
+import { NoteBoxComponent } from './note-box/note-box.component';
+import { ReminderComponent } from './reminder/reminder.component';
+import { ArchiveComponent } from './archive/archive.component';
+import { TrashComponent } from './trash/trash.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +36,11 @@ import { MatListModule } from '@angular/material/list';
     BasicInfoComponent,
     PasswordComponent,
     HomeComponent,
+    NotesComponent,
+    NoteBoxComponent,
+    ReminderComponent,
+    ArchiveComponent,
+    TrashComponent,
   ],
   imports: [
     BrowserModule,

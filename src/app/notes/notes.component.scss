@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    width: 400px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+   
+}
+.inputCnt{
+   
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0.5px 0.5px 2px 2px rgb(196, 196, 197);
+    border-radius: 10px;
+    width: 550px;
+    // position: fixed;
+}
+.icons {
+    vertical-align: middle;
+    margin: 9px;
+    height: 25px;
+    width: 25px;
+  }
+//   .div-2{
+//     padding-top: 50px;
+//   }

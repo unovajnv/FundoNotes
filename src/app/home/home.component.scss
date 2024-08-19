@@ -1,20 +1,23 @@
-.example-spacer {
-    flex: 1 1 auto;
-    background-color: yellow;
-  }
-  .mat-toolbar {
-    background: #ffffff;
-    color: rgba(0, 0, 0, 0.87);
+body{
+  background-color: #ffffff;
 }
-.mat-toolbar-row, .mat-toolbar-single-row {
+.example-spacer {
+  flex: 1 1 auto;
+  background-color: yellow;
+}
+.mat-toolbar {
+  background: #ffffff;
+  color: rgba(0, 0, 0, 0.87);
+}
+.mat-toolbar-row,
+.mat-toolbar-single-row{
   position: fixed;
 }
-
-.img{
+.img {
   vertical-align: middle;
 }
-.searchBar{
-  background-color: rgb(203, 203, 204);
+.searchBar {
+  background-color: rgb(228, 228, 230);
   display: inline;
   align-items: center;
   vertical-align: middle;
@@ -22,33 +25,33 @@
   border-radius: 10px;
   margin-right: 20px;
 }
-.icons{
+.icons {
   vertical-align: middle;
-   margin: 15px;
-   height:25px;
-   width:25px;
+  margin: 15px;
+  height: 25px;
+  width: 25px;
 }
-.userProfile{
+.userProfile {
   display: inline;
   vertical-align: middle;
   border: 1px solid black;
   border-radius: 10px;
   height: 45px;
- 
 }
-.inputBox{
-  background-color:rgb(203, 203, 204);
-   border: none; 
-   height: 35px; 
-   width: 92%; 
-   margin: 4px 3px; 
-   border: none; 
-   outline: none;
+.inputBox {
+  background-color: rgb(228, 228, 230);
+  border: none;
+  height: 35px;
+  width: 92%;
+  margin: 4px 3px;
+  border: none;
+  outline: none;
 }
-.logo{
+.logo {
   vertical-align: middle;
   height: 50px;
-  width:  50px;
+  width: 50px;
+  cursor: pointer;
 }
 
 .sidebar {
@@ -64,8 +67,16 @@
 .sidebar.open {
   left: 0;
 }
-::ng-deep .mat-list-item-content:hover{
-   background-color: rgb(215, 215, 147) !important;
-   border-top-right-radius: 30px;
-   border-bottom-right-radius: 30px;
+::ng-deep .mat-list-item-content:hover {
+  background-color:rgb(241, 203, 131);
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.homeOptions{
+  margin: 7px auto;
+}
+.mainct{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }

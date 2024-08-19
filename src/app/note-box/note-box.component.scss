@@ -1,0 +1,25 @@
+body{
+    background-color: white !important;
+}
+.example-card {
+    max-width: 250px;
+    margin-top: 35px;
+    // margin-left: 250px ;
+    padding: 16px;
+    // border: 1px solid ;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 4px rgb(224, 224, 224);
+  }
+  .noteBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 100px;
+    margin-left: 250px;
+  }
+  .example-card-footer {
+    padding: 16px;
+    display: inline;
+    justify-content: space-between;
+
+  }

@@ -3,11 +3,11 @@
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="toggleSidebar()">
           <mat-icon>menu</mat-icon>
         </button>
-        <div><span><img src="../../assets/keepLogo.png" class="logo" alt=""></span><span>Keep</span></div>
+        <div><span><img src="../../assets/keepLogo.png" class="logo" alt="" [routerLink]="['/home']" ></span><span>Keep</span></div>
         <span class="example-spacer"></span>
         <span class=" searchBar">
         <span><img src="../../assets/searchIcon.png " height="35px" width="35px" class="img"></span>
-         <input type="text" value="" class="inputBox">
+         <input type="text" value="" class="inputBox" placeholder="Search">
         </span>
         <span><img src="../../assets/refresh.png" class="icons" alt=""></span>
         <span style="rotate: 90deg;"><img src="../../assets/pause.png" class="icons"  alt=""></span>
@@ -19,32 +19,23 @@
         </div>
       </mat-toolbar>
 
+
     <!-- sideBar -->
-
-
+     
+    <!-- style="display: flex; justify-content:center;" -->
+  <div class="mainct" >
     <div class="sidebar" [class.open]="isSidebarOpen">
       <mat-nav-list>
-        <a mat-list-item href="#"><span><img src="../../assets/bulb.png" class="icons" alt=""></span><span>Notes</span></a>
-        <a mat-list-item href="#"><span><img src="../../assets/reminder.png" class="icons" alt=""></span><span>Reminder</span></a>
-        <a mat-list-item href="#"><span><img src="../../assets/bulb.png" class="icons" alt=""></span><span>Notes</span></a>
-        <a mat-list-item href="#"><span><img src="../../assets/pen.png" class="icons" alt=""></span><span>Edit Labels</span></a>
-        <a mat-list-item href="#"><span><img src="../../assets/archive.png" class="icons" alt=""></span><span>Archive</span></a>
-        <a mat-list-item href="#"><span><img src="../../assets/delete.png" class="icons" alt=""></span><span>Trash</span></a>
+        <a mat-list-item [routerLink]="['/home/notes']" class="homeOptions"><span><img src="../../assets/bulb.png" class="icons" alt=""></span><span>Notes</span></a>
+        <a mat-list-item [routerLink]="['/home/reminder']" class="homeOptions"><span><img src="../../assets/reminder.png" class="icons" alt=""></span><span>Reminder</span></a>
+        <a mat-list-item [routerLink]="['/home/notes']" class="homeOptions"><span><img src="../../assets/label.png" class="icons" alt="" style="color: black;"></span><span>Label</span></a>
+        <a mat-list-item [routerLink]="['/home/notes']" class="homeOptions"><span><img src="../../assets/pen.png" class="icons" alt=""></span><span>Edit Labels</span></a>
+        <a mat-list-item [routerLink]="['/home/archive']" class="homeOptions"><span><img src="../../assets/archive.png" class="icons" alt=""></span><span>Archive</span></a>
+        <a mat-list-item [routerLink]="['/home/trash']" class="homeOptions"><span><img src="../../assets/delete.png" class="icons" alt=""></span><span>Trash</span></a>
       </mat-nav-list>
     </div>
-
-
-
-
-
-
-
-
-
-  <!-- sidebar -->  
-  <!-- <mat-sidenav-container class="example-container">
-    <mat-sidenav #sidenav mode="side" opened="true">
-     
-    </mat-sidenav>
-  </mat-sidenav-container> -->
+    <div>
+       <router-outlet></router-outlet>
+    </div>
+  </div>
 </body>

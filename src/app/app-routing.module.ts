@@ -5,10 +5,33 @@ import { LoginComponent } from './login/login.component';
 import { BasicInfoComponent } from './basic-info/basic-info.component';
 import { PasswordComponent } from './password/password.component';
 import { HomeComponent } from './home/home.component';
+import { NotesComponent } from './notes/notes.component';
+import { ReminderComponent } from './reminder/reminder.component';
+import { TrashComponent } from './trash/trash.component';
+import { ArchiveComponent } from './archive/archive.component';
 const routes: Routes = [
   {
      path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    children: [
+      {
+        path: 'notes',
+        component: NotesComponent,
+        
+      },
+      {
+        path:'reminder',
+        component: ReminderComponent
+      },
+      {
+        path:'trash',
+        component: TrashComponent
+      },
+      {
+        path:'archive',
+        component: ArchiveComponent
+      }
+  ]
   },
   {
     path: 'register',
