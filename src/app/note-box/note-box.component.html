@@ -1,6 +1,7 @@
+
 <div class="noteBox">
-  <div *ngFor ="let d of notesList">
-    <div class="example-card" appearance="outlined"  *ngIf="!d.isDeleted && !d.isArchived">
+  <div *ngFor ="let d of notesList | searchPipe:sharedValue">
+    <div class="example-card" appearance="outlined"  *ngIf="!d.isDeleted && !d.isArchived" >
       <div>
         <mat-card-header>
           <mat-card-title >{{d.title}}</mat-card-title>

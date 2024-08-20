@@ -7,19 +7,17 @@
         <span class="example-spacer"></span>
         <span class=" searchBar">
         <span><img src="../../assets/searchIcon.png " height="35px" width="35px" class="img"></span>
-         <input type="text" value="" class="inputBox" placeholder="Search">
+         <input type="text" value="" class="inputBox" placeholder="Search" [(ngModel)]="inputValue" (ngModelChange)="onInputChange()">
         </span>
         <span><img src="../../assets/refresh.png" class="icons" alt=""></span>
         <span style="rotate: 90deg;"><img src="../../assets/pause.png" class="icons"  alt=""></span>
         <span><img src="../../assets/setting.png" class="icons" alt=""></span>
         <span><img src="../../assets/nineDots.png" class="icons" alt=""></span>
-        <div class="userProfile">
+        <div class="userProfile" (click)="logOut()">
           <span><img src="../../assets/Go-Digit-Logo.jpg" width="70px" height="25px" style="vertical-align: middle;" alt=""></span>
           <span><img src="../../assets/virat.avif" style="border-radius: 40px; height: 25px; width: 25px; margin: 10px; vertical-align: middle;" alt=""></span>
         </div>
       </mat-toolbar>
-
-
     <!-- sideBar -->
      
     <!-- style="display: flex; justify-content:center;" -->

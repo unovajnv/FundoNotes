@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NotesService } from '../service/notes/notes.service';
+import { Input } from '@angular/core';
+import { SharedService } from '../service/shared/shared.service';
 @Component({
   selector: 'app-note-box',
   templateUrl: './note-box.component.html',
@@ -7,7 +9,9 @@ import { NotesService } from '../service/notes/notes.service';
 })
 export class NoteBoxComponent implements OnInit {
 
-  constructor(private notesService:NotesService) { }
+  sharedValue: string='';
+  // @Input() searchQ: string='';
+  constructor(private notesService:NotesService, private sharedService:SharedService) { }
 
   notesList: any[] =[];
   ngOnInit(): void {
@@ -20,7 +24,9 @@ export class NoteBoxComponent implements OnInit {
         console.log('Error occurred: ', e);
       },
     });
+    this.sharedService.currentData.subscribe(data => this.sharedValue = data);
   }
+  
 }
   
 

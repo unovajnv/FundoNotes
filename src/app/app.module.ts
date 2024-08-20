@@ -27,6 +27,7 @@ import { NoteBoxComponent } from './note-box/note-box.component';
 import { ReminderComponent } from './reminder/reminder.component';
 import { ArchiveComponent } from './archive/archive.component';
 import { TrashComponent } from './trash/trash.component';
+import { SearchPipe } from './pipe/search.pipe';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { TrashComponent } from './trash/trash.component';
     ReminderComponent,
     ArchiveComponent,
     TrashComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
