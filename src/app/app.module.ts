@@ -59,7 +59,7 @@ import { TrashComponent } from './trash/trash.component';
     ReactiveFormsModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

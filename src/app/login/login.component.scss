@@ -149,3 +149,7 @@ span {
     background-color: rgb(184, 110, 110);
     width: 100%;
 }
+
+::ng-deep .mat-form-field-flex{
+  margin: 20px auto;
+}

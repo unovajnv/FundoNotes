@@ -33,43 +33,53 @@
           <h1>Sign in</h1>
           <span>Use your Google Account</span>
         </div>
-        <div class="flex-container-2">
-          <div>
+        <form action="" [formGroup]="loginForm">
+          <div class="flex-container-2">
             <div>
-              <mat-form-field appearance="outline" color="primary">
-                <mat-label>Email or phone</mat-label>
-
-
-                <input matInput placeholder="email" [formControl]="emailFormControl" [errorStateMatcher]="matcher"/>
-                
-                <mat-error style="margin: 13px 0px;" *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                  Please enter a valid email address
+              <div>
+                <mat-form-field appearance="outline" color="primary">
+                  <mat-label>Email or phone</mat-label>
+                  <input
+                    matInput
+                    placeholder="email"
+                    formControlName="email"
+                  />
+                  <mat-error
+                    *ngIf="
+                      emailFormControl.hasError('email') &&
+                      !emailFormControl.hasError('required')
+                    "
+                  >
+                    Please enter a valid email address
                   </mat-error>
-                  <mat-error style="margin: 12px 0px;" *ngIf="emailFormControl.hasError('required')">
-                  Email is <strong>required</strong>
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
                   </mat-error>
-
-
-              </mat-form-field>
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field appearance="outline" color="primary">
+                  <mat-label>Password</mat-label>
+                  <input
+                    matInput
+                    placeholder="password"
+                    formControlName="password"
+                  />
+                  <mat-error
+                    *ngIf="
+                      emailFormControl.hasError('email') &&
+                      !emailFormControl.hasError('required')
+                    "
+                  >
+                    Please enter correct password
+                  </mat-error>
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    password is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+              </div>
             </div>
-            <div>
-              <button mat-button color="primary" class="blue-button">
-                Forgot email?
-              </button>
-            </div>
-          </div>
-          <div>
-            <p class="note">
-              Not your computer? Use Guest mode to sign in privately.
-            </p>
-            <div>
-              <button mat-button color="primary" class="blue-button">
-                Learn more about using Guest mode
-              </button>
-            </div>
-          </div>
-          <div class="button-class">
-            <!-- <a > -->
+            <div class="button-class">
               <button
                 mat-button
                 color="primary"
@@ -79,42 +89,53 @@
               >
                 Create account
               </button>
-            <!-- </a> -->
-            <button mat-raised-button color="primary" class="button button-2">
-              Next
-            </button>
+              <button
+                mat-raised-button
+                color="primary"
+                class="button button-2"
+                (click)="onSubmit()"
+              >
+                Next
+              </button>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
     </form>
   </div>
 
-  <div class="main-2">
-      <div class="btn" >
-        <mat-select [value]="'en-US'" placeholder="English (United States)" disabledRipple>
-          <mat-option class="opt" value="en-US">English (United States)</mat-option>
-          <mat-option class="opt" value="fr">French</mat-option>
-          <mat-option class="opt" value="de">German</mat-option>
-          <mat-option class="opt" value="it">Italian</mat-option>
-          <mat-option class="opt" value="es">Spanish</mat-option>
-          <mat-option class="opt" value="pt">Portuguese</mat-option>
-          <mat-option class="opt" value="ja">Japanese</mat-option>
-          <mat-option class="opt" value="ko">Korean</mat-option>
-        </mat-select>
-      </div>
+  <!-- <div class="main-2">
+    <div class="btn">
+      <mat-select
+        [value]="'en-US'"
+        placeholder="English (United States)"
+        disabledRipple
+      >
+        <mat-option class="opt" value="en-US"
+          >English (United States)</mat-option
+        >
+        <mat-option class="opt" value="fr">French</mat-option>
+        <mat-option class="opt" value="de">German</mat-option>
+        <mat-option class="opt" value="it">Italian</mat-option>
+        <mat-option class="opt" value="es">Spanish</mat-option>
+        <mat-option class="opt" value="pt">Portuguese</mat-option>
+        <mat-option class="opt" value="ja">Japanese</mat-option>
+        <mat-option class="opt" value="ko">Korean</mat-option>
+      </mat-select>
+    </div>
     <div>
       <button class="footer-button">Help</button>
       <button class="footer-button">Privacy</button>
       <button class="footer-button">Terms</button>
     </div>
-  </div>
+  </div> -->
 
   <!---------------- PopUp  ------------------------->
-<mat-card id="popUp">
-  <div>
-    <p class="pp" [routerLink]="['/register']">For my personal use</p>
-    <p class="pp" [routerLink]="['/register']">For my child</p>
-    <p class="pp" [routerLink]="['/register']">For work or my bussiness</p>
-  </div>
-</mat-card>
+  <mat-card id="popUp">
+    <div>
+      <p class="pp" [routerLink]="['/register']">For my personal use</p>
+      <p class="pp" [routerLink]="['/register']">For my child</p>
+      <p class="pp" [routerLink]="['/register']">For work or my bussiness</p>
+    </div>
+  </mat-card>
 </body>

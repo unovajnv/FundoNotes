@@ -9,15 +9,16 @@ import { NotesComponent } from './notes/notes.component';
 import { ReminderComponent } from './reminder/reminder.component';
 import { TrashComponent } from './trash/trash.component';
 import { ArchiveComponent } from './archive/archive.component';
+import { AuthGuard } from './auth/auth.guard';
 const routes: Routes = [
   {
      path: 'home',
     component: HomeComponent,
+    // canActivate:[AuthGuard],
     children: [
       {
         path: 'notes',
         component: NotesComponent,
-        
       },
       {
         path:'reminder',
