@@ -14,11 +14,12 @@ const routes: Routes = [
   {
      path: 'home',
     component: HomeComponent,
-    // canActivate:[AuthGuard],
+   
     children: [
       {
         path: 'notes',
         component: NotesComponent,
+        canActivate:[AuthGuard],
       },
       {
         path:'reminder',

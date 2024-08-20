@@ -5,6 +5,7 @@ import {FormGroup} from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { HttpService } from '../service/http.service';
 import { Router } from '@angular/router';
+import { AuthGuard } from '../auth/auth.guard';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,8 +14,8 @@ import { Router } from '@angular/router';
 
 
 export class LoginComponent {
-  password: string='';
-  email: string='';
+  // password: string='';
+  // email: string='';
  loginForm: FormGroup;
   constructor(private formbuilder:FormBuilder, private httpService:HttpService, private router:Router) {
     this.loginForm = this.formbuilder.group({
@@ -25,15 +26,15 @@ export class LoginComponent {
   
 
   onSubmit(){
-    
     this.httpService.postAPIcall('/user/login',this.loginForm.value).subscribe({
       next: (res: any) => {
         console.log('result is: ', res);
-        localStorage.setItem("access_Token", res.id);
-        this.router.navigate(['/home/notes']);
+        localStorage.setItem("access_token", res.id);
+       
+        this.router.navigateByUrl('/home/notes');
+        // console.log('access_Token is: ', res)
       },
       error: (e) => {
-        
         console.log('Error occurred: ', e);
       },
     });

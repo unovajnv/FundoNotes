@@ -11,7 +11,7 @@ export class HomeComponent{
   dataArray: any[] = [];
 
   ngOnInit(): void {
-    localStorage.setItem('access_token', 'wPdnlw7aSP9MkmmIn1ARRLt3YiFaqW0AhbujF2HQywT0QKyCVQvYYCo3MJLtB5iJ')
+    // localStorage.setItem('access_token', 'wPdnlw7aSP9MkmmIn1ARRLt3YiFaqW0AhbujF2HQywT0QKyCVQvYYCo3MJLtB5iJ')
   }
   isSidebarOpen = false;
   toggleSidebar() {
