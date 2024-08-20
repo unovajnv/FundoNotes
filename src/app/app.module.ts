@@ -64,4 +64,6 @@ import { TrashComponent } from './trash/trash.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  
+}

@@ -17,11 +17,13 @@ export class NoteBoxComponent implements OnInit {
   notesList: any[] =[];
   ngOnInit(): void {
     this.notesService.getAllNotesApiCall("getNotesList").subscribe({
-      next: (r: any) => {
-        this.notesList = r.data.data;
+      next: (res: any) => {
+        this.notesList = res.data.data;
         console.log('result is: ', this.notesList);
       },
-      error: (e) => {},
+      error: (e) => {
+        console.log('Error occurred: ', e);
+      },
     });
   }
   longText = `The Chihuahua is a Mexican breed of toy dog. It is named for the

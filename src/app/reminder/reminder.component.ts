@@ -9,7 +9,9 @@ export class ReminderComponent implements OnInit {
 
   constructor() { }
 
+  headVal:string = "Reminder";
   ngOnInit(): void {
+   
   }
 
 }

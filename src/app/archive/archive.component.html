@@ -1,1 +1,18 @@
-<p>archive works!</p>
+<div class="noteBox">
+    <div *ngFor ="let d of notesList">
+      <div class="example-card" appearance="outlined"  *ngIf="d.isArchived && !d.isDeleted">
+          <mat-card-header>
+            <mat-card-title >{{d.title}}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p >{{d.description}}</p>
+          </mat-card-content>
+          <mat-card-footer class="example-card-footer">
+              <button type="">Edit</button>
+              <button type="">Delete</button>
+              <button type="">Archive</button>
+          </mat-card-footer>
+      </div>
+    </div>     
+  </div>
+  

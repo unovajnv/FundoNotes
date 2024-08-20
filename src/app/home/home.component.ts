@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../service/http.service';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { ReminderComponent } from '../reminder/reminder.component';
+import { TrashComponent } from '../trash/trash.component';
+import { ArchiveComponent } from '../archive/archive.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,7 +13,8 @@ import { Title } from '@angular/platform-browser';
 })
 
 export class HomeComponent{
-  constructor(private httpService: HttpService, private router: Router, private titleService: Title) { }
+  constructor(private httpService: HttpService,
+     private router: Router, private titleService: Title) { }
   dataArray: any[] = [];
 
   ngOnInit(): void {
