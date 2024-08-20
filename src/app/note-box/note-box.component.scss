@@ -7,10 +7,9 @@ body{
     // margin-left: 250px ;
     padding: 10px;
     // border: 1px solid ;
+    background-color: rgb(249, 249, 249);
     border-radius: 5px;
     box-shadow: 2px 2px 4px 4px rgb(224, 224, 224);
-
-
     min-width: 200px;
     min-height: 100px;
     overflow: hidden;
@@ -19,13 +18,10 @@ body{
     flex-direction: column;
     justify-content: flex-start;
   }
-
   .example-card:hover{
-    min-height: 130px;
+    // min-height: 130px;
     justify-content: space-between;
   }
-
-
   .noteBox{
     display: flex;
     flex-wrap: wrap;
@@ -35,16 +31,14 @@ body{
   }
   .example-card-footer {
     padding: 10px;
-    display: inline;
+    display: flex;
     justify-content: space-between;
     display: none;
 
   }
-
 .example-card:hover .example-card-footer{
   display: block;
 }
-
   mat-card-title {
     word-wrap: break-word; 
     overflow-wrap: break-word; 
@@ -54,4 +48,12 @@ body{
     word-wrap: break-word; 
     overflow-wrap: break-word; 
     word-break: break-all;
+  }
+
+  .icons {
+    vertical-align: middle;
+    margin: 4px 5px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
   }

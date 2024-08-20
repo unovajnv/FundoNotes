@@ -8,9 +8,6 @@ import {OnInit,Component } from '@angular/core';
 export class BasicInfoComponent implements OnInit {
 
   constructor() { }
-
-  months = ["Jan", "Feb", "Mar", "Apr", "May", "jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
   ngOnInit(): void {
   }
 

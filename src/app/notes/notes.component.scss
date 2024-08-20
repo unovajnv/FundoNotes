@@ -10,15 +10,13 @@ input{
    
 }
 .inputCnt{
-   
-    margin-top: 100px;
     display: flex;
     justify-content: center;
     background-color: white;
     box-shadow: 0.5px 0.5px 2px 2px rgb(196, 196, 197);
     border-radius: 10px;
     width: 550px;
-    margin:100px 350px 10px;
+    margin:80px 350px 10px;
     // position: fixed;
 }
 .icons {
@@ -27,6 +25,6 @@ input{
     height: 25px;
     width: 25px;
   }
-//   .div-2{
-//     padding-top: 50px;
-//   }
+  .div-2{
+    padding-top: 50px;
+  }

@@ -1,10 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { HttpService } from '../service/http.service'
-import { Router } from '@angular/router';
-import { Title } from '@angular/platform-browser';
-import { environment } from 'src/environments/environment';
 import { NotesService } from '../service/notes/notes.service';
 
 
@@ -16,7 +10,7 @@ import { NotesService } from '../service/notes/notes.service';
 })
 export class TrashComponent implements OnInit {
 
-   constructor(private httpService: HttpService, private router: Router, private titleService: Title , private notesService:NotesService) { }
+   constructor(private notesService:NotesService) { }
 
    headVal:string = "Trash";
   notesList: any[] =[];
