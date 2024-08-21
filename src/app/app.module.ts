@@ -63,7 +63,7 @@ import { SearchPipe } from './pipe/search.pipe';
     MatSidenavModule,
     MatListModule,
   ],
-  providers: [],
+  providers: [NoteBoxComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {

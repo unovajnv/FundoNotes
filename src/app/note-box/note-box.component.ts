@@ -18,7 +18,6 @@ export class NoteBoxComponent implements OnInit {
     this.notesService.getAllNotesApiCall("getNotesList").subscribe({
       next: (res: any) => {
         this.notesList = res.data.data;
-        console.log('result is: ', this.notesList);
       },
       error: (e) => {
         console.log('Error occurred: ', e);
@@ -28,24 +27,10 @@ export class NoteBoxComponent implements OnInit {
   }
 
   //----------------Delete data -------------------------------
-  deleteData(id:any): void{
-     console.log(id);
-     this.notesList.filter((d)=>{
-         if(d.id === id)
-         {
-          d.isDeleted = true;
-          // this.http.addNotes(d.title ,d.description).subscribe({
-          //   next:(res)=>{
-          //     console.log(d.title);
-          //     console.log(d.description);
-          //   },
-          //   error:(err)=>{
-          //     console.log(err)
-          //   }
-          // })
-         }
-     })
-     
+  deleteData(data:any): void{
+    data.isDeleted = true;
+    this.http.deleteNote(data);
+    
   }
 
   //----------------Archive data -------------------------------

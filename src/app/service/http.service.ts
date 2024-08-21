@@ -33,4 +33,10 @@ export class HttpService {
     //console.log({title:String, description:String})
     return this.http.post(`${this.BASE_URL}/notes/addNotes?access_token=${localStorage.getItem('access_token')}`,{title, description})
   }
+
+  deleteNote(data:any){
+    console.log("https://fundoonotes.incubation.bridgelabz.com/api/notes/"+`${data.id}` +"?access_token="+`${this.access_token}`)
+    console.log(data);
+    return this.http.patch("https://fundoonotes.incubation.bridgelabz.com/api/notes/"+`${data.id}` +"?access_token="+`${this.access_token}`,data)
+  }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../service/http.service';
+import { SharedService } from '../service/shared/shared.service';
 @Component({
   selector: 'app-notes',
   templateUrl: './notes.component.html',
@@ -36,15 +37,13 @@ export class NotesComponent implements OnInit {
   title:any="";
   description:any="";
   notesInput(e:any){
- 
     if(e.key=='Enter'){
+      console.log(e.key);
       this.openAddNotes(e);
       console.log("enter is pressed")
       this.http.addNotes(this.title ,this.description).subscribe({
         next:(res)=>{
-          // console.log(res);
-          console.log(this.title);
-          console.log(this.description);
+          console.log(res);
         },
         error:(err)=>{
           console.log(err)

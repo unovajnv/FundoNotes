@@ -12,4 +12,9 @@ export class SharedService {
   changeData(data: string) {
     this.dataSource.next(data);
   }
+
+// sharing data array
+
+
+
 }
