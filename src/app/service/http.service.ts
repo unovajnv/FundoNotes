@@ -25,7 +25,12 @@ export class HttpService {
   }
 
   getAPICall(endpoint: string) {
-    // console.log(this.BASE_URL, endpoint);
+     //console.log(this.BASE_URL, endpoint);
     return this.http.get(this.BASE_URL + endpoint);
+  }
+
+  addNotes(title:any, description:any){
+    //console.log({title:String, description:String})
+    return this.http.post(`${this.BASE_URL}/notes/addNotes?access_token=${localStorage.getItem('access_token')}`,{title, description})
   }
 }

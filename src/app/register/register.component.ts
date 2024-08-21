@@ -18,8 +18,6 @@ export class RegisterComponent implements OnInit {
   constructor() { }
   ngOnInit(): void {
   }
-
-
   firstNameFormControl = new FormControl('', [
     Validators.required,
     Validators.email,

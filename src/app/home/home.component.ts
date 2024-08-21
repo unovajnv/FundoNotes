@@ -15,12 +15,11 @@ export class HomeComponent{
   }
   onInputChange() {
     this.sharedService.changeData(this.inputValue);
+
   }
   dataArray: any[] = [];
 
-  ngOnInit(): void {
-    // localStorage.setItem('access_token', 'wPdnlw7aSP9MkmmIn1ARRLt3YiFaqW0AhbujF2HQywT0QKyCVQvYYCo3MJLtB5iJ')
-  }
+  ngOnInit(): void {}
   isSidebarOpen = false;
   toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;
