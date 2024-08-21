@@ -25,6 +25,7 @@ export class HomeComponent{
     this.isSidebarOpen = !this.isSidebarOpen;
   }
 
+  //----------------logout from profile -------------------------------
   logOut(){
     localStorage.removeItem('access_token');
     this.router.navigate(['/']);
